@@ -9,7 +9,14 @@ var numbers = "1234567890";
 //empty string to list the characters for the password
 var passwordCharacters = "";
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
+  passwordText.value = password;
+
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -43,7 +50,7 @@ function generatePassword() {
       var upper = confirm ("Would you like Uppercase Letters?");
       var lower = confirm ("Would you like lower case letters");
       var numbers = confirm ("Would you like numbers?");
-
+      //If/else to add character types to the possible characters
       if (special){
         passwordCharacters+= specialCharacters
       }else{
@@ -81,11 +88,3 @@ function generatePassword() {
   return result;
   console.log(result);
 };
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
