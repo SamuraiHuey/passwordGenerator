@@ -49,28 +49,21 @@ function generatePassword() {
       var special = confirm ("Would you like special characters");
       var upper = confirm ("Would you like Uppercase Letters?");
       var lower = confirm ("Would you like lower case letters");
-      var numbers = confirm ("Would you like numbers?");
+      var number = confirm ("Would you like numbers?");
       //If/else to add character types to the possible characters
       if (special){
         passwordCharacters+= specialCharacters
-      }else{
-
       }
       if (upper){
         passwordCharacters+= upperCase
-      }else{
-
       }
       if (lower){
         passwordCharacters+= lowerCase
-      }else{
-
       }
-      if (numbers){
+      if (number){
         passwordCharacters+= numbers
-      }else{
-        
       }
+      console.log(numbers);
 
       //if user selects no characters, must be sent back to do so
       if(!special&&!upper&&!lower&&!numbers){
